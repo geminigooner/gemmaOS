@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Warm Cream Theme (Default) */
+    --gemma-surface: #FFFDF7;
+    --gemma-panel: #FFF6E8;
+    --gemma-card: #FFFDF9;
+    --gemma-text: #2A114B;
+    --gemma-text-muted: #65438C;
+    --gemma-plum: #2A114B;
+    --gemma-pink: #FF66B5;
+    --gemma-pink-light: #FFA8D8;
+    --gemma-butter: #FFECB3;
+    --gemma-lavender: #E5CCFF;
+    --gemma-violet: #9B5DE5;
+  }
+
+  .dark {
+    /* Deep Violet Night Theme */
+    --gemma-surface: #2D1452;
+    --gemma-panel: #230E42;
+    --gemma-card: #3B1B68;
+    --gemma-text: #FFF8F0;
+    --gemma-text-muted: #D4B8FF;
+    --gemma-plum: #1A0833;
+    --gemma-pink: #FF5CAD;
+    --gemma-pink-light: #FF85C2;
+    --gemma-butter: #FFE599;
+    --gemma-lavender: #6B3FA0;
+    --gemma-violet: #B57BFF;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--gemma-text);
+    overflow: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Toy-like Chunky Borders & Shadows per GemmaOS Visual System */
+.gemma-window-border {
+  border: 3.5px solid #2A114B;
+  box-shadow: 0 8px 0 #2A114B, 0 14px 28px rgba(26, 8, 51, 0.35);
+}
+
+.gemma-dock-border {
+  border: 3.5px solid #2A114B;
+  box-shadow: 0 6px 0 #2A114B, 0 10px 20px rgba(26, 8, 51, 0.28);
+}
+
+.gemma-card-border {
+  border: 2.5px solid #2A114B;
+  box-shadow: 0 3px 0 #2A114B;
+}
+
+.gemma-pill-border {
+  border: 2.5px solid #2A114B;
+  box-shadow: 0 2px 0 #2A114B;
+}
+
+.gemma-btn-press {
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gemma-btn-press:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #2A114B;
+}
+
+/* Custom subtle scrollbars inside OS windows */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(42, 17, 75, 0.06);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 93, 229, 0.45);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 102, 181, 0.75);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "GemmaOS",
+  "description": "Modular AI-native desktop operating environment with a Linux-portable Platform Abstraction Layer, dual-theme toy-like visual system, and core system applications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
